@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:trialproject/custom_list_tile.dart';
 import 'package:trialproject/tabs.dart';
 
+import 'stories/stories_page_controller.dart';
+
 
 class SimpleListViewPage extends StatelessWidget {
   const SimpleListViewPage({super.key});
@@ -15,10 +17,12 @@ class SimpleListViewPage extends StatelessWidget {
         actions: [
           Icon(Icons.list),
          IconButton(onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (_) => StoriesPageController()  ));
+          
           Navigator.of(context).push(MaterialPageRoute(builder: (_) => Tabs() ));
          }, 
          
-         icon: Icon(Icons. forward))
+         icon: Icon(Icons. more))
         ],
 
       ),
